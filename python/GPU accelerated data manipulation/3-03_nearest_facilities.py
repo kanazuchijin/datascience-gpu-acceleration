@@ -78,3 +78,4 @@ grid_n, grid_e = latlong2osgbgrid_cupy(cp.asarray(infected_df['lat']), cp.asarra
 
 infected_df['northing'] = cudf.Series(grid_n).astype('float32')
 infected_df['easting'] = cudf.Series(grid_e).astype('float32')
+
