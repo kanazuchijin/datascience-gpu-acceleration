@@ -8,6 +8,8 @@ gdf = cudf.read_csv('./data/week1.csv', dtype=['int16', 'str', 'float64', 'float
 print(gdf.columns)
 print(gdf.dtypes)
 
+gdf = gdf[['lat','long','infected']]
+
 #gdf['infected'].head()
 
 infected_df = gdf[gdf['infected'] == True].reset_index()
